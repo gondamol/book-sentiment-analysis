@@ -25,6 +25,17 @@ matplotlib.use('Agg')  # Required for headless environments
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import nltk
+
+# Download NLTK data
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('punkt_tab')
+    nltk.download('brown')
+
+from textblob import TextBlob
 
 # Page configuration
 st.set_page_config(
