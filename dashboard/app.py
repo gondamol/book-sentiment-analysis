@@ -20,8 +20,11 @@ import json
 from pathlib import Path
 from datetime import datetime
 from wordcloud import WordCloud
+import matplotlib
+matplotlib.use('Agg')  # Required for headless environments
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 # Page configuration
 st.set_page_config(
@@ -32,8 +35,26 @@ st.set_page_config(
 )
 
 # Paths
-PROJECT_DIR = Path(__file__).parent.parent
-DATA_DIR = PROJECT_DIR / "data"
+# Try to find the data directory
+current_dir = Path(__file__).parent
+root_dir = current_dir.parent
+data_dir_candidates = [
+    root_dir / "data",              # Local development
+    Path("data"),                   # Streamlit Cloud (CWD=root)
+    Path("../data"),                # Fallback
+    current_dir / "data"            # Fallback
+]
+
+DATA_DIR = None
+for d in data_dir_candidates:
+    if d.exists():
+        DATA_DIR = d
+        break
+
+if DATA_DIR is None:
+    st.error("Could not find data directory. Please check deployment structure.")
+    st.stop()
+
 PROCESSED_DIR = DATA_DIR / "processed"
 
 # Custom CSS for futuristic dark theme
