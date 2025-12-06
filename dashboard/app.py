@@ -16,7 +16,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import sqlite3
 import json
 from pathlib import Path
 from datetime import datetime
@@ -35,7 +34,6 @@ st.set_page_config(
 # Paths
 PROJECT_DIR = Path(__file__).parent.parent
 DATA_DIR = PROJECT_DIR / "data"
-DB_PATH = DATA_DIR / "books.db"
 PROCESSED_DIR = DATA_DIR / "processed"
 
 # Custom CSS for futuristic dark theme
@@ -161,56 +159,52 @@ st.markdown("""
 
 @st.cache_data(ttl=300)
 def load_data():
-    """Load all data from database and processed files"""
+    """Load all data from JSON files (no database dependency for Streamlit Cloud)"""
     data = {
-        'books': [],
-        'reviews': [],
+        'books': pd.DataFrame(),
+        'reviews': pd.DataFrame(),
         'sentiment_results': {},
         'stats': {}
     }
     
-    # Load from database
-    if DB_PATH.exists():
+    # Load books from JSON
+    books_file = PROCESSED_DIR / "books.json"
+    if books_file.exists():
         try:
-            conn = sqlite3.connect(DB_PATH)
-            
-            # Load books
-            data['books'] = pd.read_sql_query("""
-                SELECT * FROM books ORDER BY ratings_count DESC
-            """, conn)
-            
-            # Load reviews
-            data['reviews'] = pd.read_sql_query("""
-                SELECT r.*, b.title as book_title, b.category
-                FROM reviews r
-                LEFT JOIN books b ON r.book_id = b.book_id
-                ORDER BY r.sentiment_score DESC
-            """, conn)
-            
-            # Get stats
-            cursor = conn.cursor()
-            cursor.execute("SELECT COUNT(*) FROM books")
-            data['stats']['total_books'] = cursor.fetchone()[0]
-            
-            cursor.execute("SELECT COUNT(*) FROM reviews")
-            data['stats']['total_reviews'] = cursor.fetchone()[0]
-            
-            cursor.execute("SELECT COUNT(DISTINCT category) FROM books WHERE category IS NOT NULL")
-            data['stats']['categories'] = cursor.fetchone()[0]
-            
-            cursor.execute("SELECT AVG(sentiment_score) FROM reviews WHERE sentiment_score IS NOT NULL")
-            avg = cursor.fetchone()[0]
-            data['stats']['avg_sentiment'] = round(avg, 3) if avg else 0
-            
-            conn.close()
+            with open(books_file) as f:
+                books_list = json.load(f)
+            data['books'] = pd.DataFrame(books_list)
         except Exception as e:
-            st.error(f"Database error: {e}")
+            st.error(f"Error loading books: {e}")
+    
+    # Load reviews from JSON
+    reviews_file = PROCESSED_DIR / "reviews.json"
+    if reviews_file.exists():
+        try:
+            with open(reviews_file) as f:
+                reviews_list = json.load(f)
+            data['reviews'] = pd.DataFrame(reviews_list)
+        except Exception as e:
+            st.error(f"Error loading reviews: {e}")
     
     # Load sentiment results
     sentiment_file = PROCESSED_DIR / "sentiment_results.json"
     if sentiment_file.exists():
-        with open(sentiment_file) as f:
-            data['sentiment_results'] = json.load(f)
+        try:
+            with open(sentiment_file) as f:
+                data['sentiment_results'] = json.load(f)
+        except Exception as e:
+            st.error(f"Error loading sentiment: {e}")
+    
+    # Calculate stats
+    if not data['books'].empty:
+        data['stats']['total_books'] = len(data['books'])
+        data['stats']['categories'] = data['books']['category'].nunique()
+    
+    if not data['reviews'].empty:
+        data['stats']['total_reviews'] = len(data['reviews'])
+        sentiment_cols = data['reviews']['sentiment_score'].dropna()
+        data['stats']['avg_sentiment'] = round(sentiment_cols.mean(), 3) if len(sentiment_cols) > 0 else 0
     
     return data
 
