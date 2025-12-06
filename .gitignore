@@ -1,0 +1,38 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data (keep processed, ignore raw)
+data/raw/*.json
+!data/raw/.gitkeep
+
+# Database (can be regenerated)
+data/books.db
+
+# Environment
+.env
+*.env.local
+secrets.toml
+
+# Temporary
+*.tmp
+.cache/

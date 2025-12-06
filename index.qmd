@@ -1,0 +1,235 @@
+---
+title: "Book Sentiment Intelligence"
+subtitle: "Discover what readers really think about books on Personal Development, Finance, Health, Philosophy & more"
+page-layout: article
+toc: true
+---
+
+::: {.hero-banner}
+# 📚 Book Sentiment Intelligence
+
+A comprehensive **sentiment analysis platform** that scrapes book reviews from multiple sources, analyzes sentiment, and provides insights across Mind, Wealth, Health, Skills, and Masculinity categories.
+:::
+
+## 🚀 Live Dashboard
+
+::: {.callout-tip}
+### View the Live Dashboard
+
+**[👉 Launch Book Sentiment Dashboard](https://book-sentiment.streamlit.app)**
+
+Real-time sentiment analysis of 700+ book reviews across 5 categories!
+:::
+
+![Dashboard Preview](assets/dashboard-preview.png)
+
+---
+
+## Overview
+
+### The Problem
+
+Book lovers face information overload:
+
+- Hard to know which books are truly worth reading
+- No way to see aggregate sentiment across thousands of reviews
+- Difficult to find books on specific topics (e.g., forex trading, stoic philosophy)
+- Reviews scattered across Reddit, Goodreads, Amazon, and forums
+
+### The Solution
+
+This platform aggregates and analyzes book reviews:
+
+| Component | Technology | Status |
+|:---|:---|:---|
+| **Multi-Source Scraping** | Open Library, Google Books, Reddit | ✅ Live |
+| **Sentiment Analysis** | VADER + TextBlob + Custom Rules | ✅ Live |
+| **SQLite Database** | Lightweight & Portable | ✅ Live |
+| **Interactive Dashboard** | Streamlit + Plotly | ✅ **Deployed** |
+| **Word Clouds** | Visual keyword analysis | ✅ Live |
+| **Search & Filter** | By category, sentiment, keyword | ✅ Live |
+
+---
+
+## Current Stats
+
+::: {.stats-container}
+::: {.stat-card}
+<span class="stat-number">419</span>
+<span class="stat-label">Books</span>
+:::
+
+::: {.stat-card}
+<span class="stat-number">710</span>
+<span class="stat-label">Reviews</span>
+:::
+
+::: {.stat-card}
+<span class="stat-number">5</span>
+<span class="stat-label">Categories</span>
+:::
+
+::: {.stat-card}
+<span class="stat-number">0.16</span>
+<span class="stat-label">Avg Sentiment</span>
+:::
+:::
+
+---
+
+## Categories
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### 🧠 Mind
+- Personal Development
+- Psychology
+- Stoicism
+- Philosophy
+- Jordan Peterson
+- Friedrich Nietzsche
+:::
+
+::: {.column width="50%"}
+### 💰 Wealth
+- Finance & Investing
+- Business
+- Rich Dad Poor Dad
+- Trading & Forex
+- Financial Freedom
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### 🏃 Health
+- Fitness & Nutrition
+- The Obesity Code
+- Outlive
+- Mental Health
+- Fasting
+:::
+
+::: {.column width="50%"}
+### 🛠️ Skills
+- Productivity
+- Leadership
+- Communication
+- Atomic Habits
+- Deep Work
+:::
+
+::::
+
+::: {.column width="100%"}
+### 🦁 Masculinity
+- The Rational Male
+- No More Mr Nice Guy
+- Way of the Superior Man
+- Self-Reliance
+- Confidence & Dating
+:::
+
+---
+
+## Data Sources
+
+| Source | Type | Auth Required |
+|:---|:---|:---|
+| **Open Library** | REST API | ❌ No |
+| **Google Books** | REST API | ❌ No |
+| **Reddit** | Public JSON | ❌ No |
+
+---
+
+## Dashboard Features
+
+### 📊 Sentiment Distribution
+- Pie chart showing positive, neutral, negative reviews
+- Overall sentiment score
+
+### 📚 Book Library
+- Browse all books with covers
+- Filter by category
+- Search by title, author, topic
+
+### 💬 Review Analysis
+- Top positive and negative reviews
+- Sentiment scores per review
+- Source attribution
+
+### ☁️ Word Cloud
+- Visual representation of common themes
+- Top keywords by frequency
+- Category-specific word analysis
+
+### 🔍 Advanced Search
+- Search for any topic (e.g., "forex trading")
+- Find relevant books and discussions
+- See sentiment for your interests
+
+---
+
+## Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Backend** | Python, SQLite |
+| **Scraping** | Requests, BeautifulSoup |
+| **NLP** | VADER Sentiment, TextBlob |
+| **Visualization** | Streamlit, Plotly, WordCloud |
+| **Deployment** | Streamlit Cloud |
+| **Automation** | GitHub Actions |
+
+---
+
+## Running Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/gondamol/book-sentiment-analysis.git
+cd book-sentiment-analysis
+
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the scraper
+python scripts/scrape_books.py
+
+# Run sentiment analysis
+python scripts/analyze_sentiment.py
+
+# Start the dashboard
+streamlit run dashboard/app.py
+```
+
+---
+
+## Links
+
+::: {.success-box}
+### 🔗 Resources
+
+[**🚀 View Live Dashboard**](https://book-sentiment.streamlit.app){.cta-button}
+[**📂 GitHub Repository**](https://github.com/gondamol/book-sentiment-analysis){.cta-button}
+[**📧 Contact Me**](mailto:nichodemuswerre@gmail.com){.cta-button}
+:::
+
+---
+
+## Related Projects
+
+- [Job Market Intelligence](../job-market-intelligence/) - Similar scraping architecture
+- [E-commerce Price Intelligence](../ecommerce-price-intelligence/) - Python + Streamlit
+- [Healthcare Analytics](../healthcare-readmission-risk/) - ML prediction pipeline
+
+---
+
+[← Back to Analytics Engineering](../)
