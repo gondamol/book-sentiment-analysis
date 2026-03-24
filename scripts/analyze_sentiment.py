@@ -19,7 +19,7 @@ import re
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional, Set
 
 # Sentiment analysis
 try:
@@ -171,6 +171,66 @@ def extract_keywords(texts: List[str], top_n: int = 100) -> List[Tuple[str, int]
     return word_counts.most_common(top_n)
 
 
+def get_table_columns(conn: sqlite3.Connection, table_name: str) -> Set[str]:
+    """Return the available columns for a SQLite table."""
+    return {row[1] for row in conn.execute(f"PRAGMA table_info({table_name})").fetchall()}
+
+
+def export_dashboard_snapshots(conn: sqlite3.Connection) -> None:
+    """Export database tables to JSON files used by the dashboard."""
+    conn.row_factory = sqlite3.Row
+    review_columns = get_table_columns(conn, "reviews")
+
+    def review_select(column: str, alias: Optional[str] = None) -> str:
+        alias = alias or column
+        return f"r.{column} AS {alias}" if column in review_columns else f"NULL AS {alias}"
+
+    books_rows = conn.execute('''
+        SELECT *
+        FROM books
+        ORDER BY COALESCE(ratings_count, 0) DESC, title ASC
+    ''').fetchall()
+
+    reviews_rows = conn.execute('''
+        SELECT
+            r.review_id,
+            r.book_id,
+            r.source,
+            {community},
+            {source_kind},
+            {category},
+            {query_term},
+            {title},
+            {url},
+            r.author,
+            r.content,
+            r.rating,
+            r.upvotes,
+            r.sentiment_score,
+            r.sentiment_label,
+            r.created_at,
+            r.scraped_at,
+            b.category AS category,
+            b.title AS linked_book_title
+        FROM reviews r
+        LEFT JOIN books b ON r.book_id = b.book_id
+        ORDER BY COALESCE(r.created_at, r.scraped_at) DESC
+    '''.format(
+        community=review_select("community"),
+        source_kind=review_select("source_kind"),
+        category=review_select("category"),
+        query_term=review_select("query_term"),
+        title=review_select("title"),
+        url=review_select("url"),
+    )).fetchall()
+
+    with open(PROCESSED_DIR / "books.json", 'w') as f:
+        json.dump([dict(row) for row in books_rows], f, indent=2, default=str)
+
+    with open(PROCESSED_DIR / "reviews.json", 'w') as f:
+        json.dump([dict(row) for row in reviews_rows], f, indent=2, default=str)
+
+
 def process_sentiment():
     """Main sentiment processing pipeline"""
     print("=" * 60)
@@ -183,6 +243,9 @@ def process_sentiment():
     
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
+    review_columns = get_table_columns(conn, "reviews")
+    review_category_expr = "COALESCE(r.category, b.category)" if "category" in review_columns else "b.category"
+    review_title_expr = "COALESCE(r.title, b.title)" if "title" in review_columns else "b.title"
     
     analyzer = SentimentAnalyzer()
     
@@ -219,12 +282,12 @@ def process_sentiment():
     # Calculate category-level sentiment
     print("\n📊 Calculating category sentiments...")
     
-    cursor.execute('''
-        SELECT b.category, AVG(r.sentiment_score) as avg_sentiment, COUNT(*) as count
+    cursor.execute(f'''
+        SELECT {review_category_expr} as category, AVG(r.sentiment_score) as avg_sentiment, COUNT(*) as count
         FROM reviews r
-        JOIN books b ON r.book_id = b.book_id
+        LEFT JOIN books b ON r.book_id = b.book_id
         WHERE r.sentiment_score IS NOT NULL
-        GROUP BY b.category
+        GROUP BY {review_category_expr}
     ''')
     
     category_sentiments = {}
@@ -238,8 +301,8 @@ def process_sentiment():
     # Get top positive and negative reviews
     print("\n⭐ Finding top reviews...")
     
-    cursor.execute('''
-        SELECT r.content, r.sentiment_score, r.source, b.title
+    cursor.execute(f'''
+        SELECT r.content, r.sentiment_score, r.source, {review_title_expr}
         FROM reviews r
         LEFT JOIN books b ON r.book_id = b.book_id
         WHERE r.sentiment_score IS NOT NULL
@@ -248,8 +311,8 @@ def process_sentiment():
     ''')
     top_positive = [{'content': r[0][:500], 'score': r[1], 'source': r[2], 'book': r[3]} for r in cursor.fetchall()]
     
-    cursor.execute('''
-        SELECT r.content, r.sentiment_score, r.source, b.title
+    cursor.execute(f'''
+        SELECT r.content, r.sentiment_score, r.source, {review_title_expr}
         FROM reviews r
         LEFT JOIN books b ON r.book_id = b.book_id
         WHERE r.sentiment_score IS NOT NULL
@@ -274,6 +337,9 @@ def process_sentiment():
     
     cursor.execute("SELECT AVG(sentiment_score) FROM reviews WHERE sentiment_score IS NOT NULL")
     overall_sentiment = cursor.fetchone()[0] or 0
+
+    print("\n💾 Exporting dashboard snapshots...")
+    export_dashboard_snapshots(conn)
     
     conn.close()
     

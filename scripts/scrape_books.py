@@ -127,6 +127,12 @@ class Database:
                 review_id TEXT PRIMARY KEY,
                 book_id TEXT,
                 source TEXT,
+                community TEXT,
+                source_kind TEXT,
+                category TEXT,
+                query_term TEXT,
+                title TEXT,
+                url TEXT,
                 author TEXT,
                 content TEXT,
                 rating REAL,
@@ -138,6 +144,19 @@ class Database:
                 FOREIGN KEY (book_id) REFERENCES books (book_id)
             )
         ''')
+
+        review_columns = {row[1] for row in cursor.execute("PRAGMA table_info(reviews)").fetchall()}
+        required_review_columns = {
+            'community': 'TEXT',
+            'source_kind': 'TEXT',
+            'category': 'TEXT',
+            'query_term': 'TEXT',
+            'title': 'TEXT',
+            'url': 'TEXT'
+        }
+        for column, column_type in required_review_columns.items():
+            if column not in review_columns:
+                cursor.execute(f"ALTER TABLE reviews ADD COLUMN {column} {column_type}")
         
         # Stats table (for dashboard)
         cursor.execute('''
@@ -194,13 +213,20 @@ class Database:
         
         cursor.execute('''
             INSERT OR REPLACE INTO reviews
-            (review_id, book_id, source, author, content, rating,
-             upvotes, sentiment_score, sentiment_label, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            (review_id, book_id, source, community, source_kind, category,
+             query_term, title, url, author, content, rating, upvotes,
+             sentiment_score, sentiment_label, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             review.get('review_id'),
             review.get('book_id'),
             review.get('source'),
+            review.get('community'),
+            review.get('source_kind'),
+            review.get('category'),
+            review.get('query_term'),
+            review.get('title'),
+            review.get('url'),
             review.get('author'),
             review.get('content'),
             review.get('rating'),
@@ -370,7 +396,7 @@ class RedditScraper:
         self.subreddits = ['books', 'suggestmeabook', 'selfimprovement', 'getdisciplined', 
                           'financialindependence', 'productivity', 'stoicism', 'philosophy']
     
-    def search_discussions(self, query: str, limit: int = 25) -> List[Dict]:
+    def search_discussions(self, query: str, category: str, limit: int = 25) -> List[Dict]:
         """Search Reddit for book discussions"""
         logger.info(f"🔴 Reddit: Searching '{query}'")
         discussions = []
@@ -397,13 +423,20 @@ class RedditScraper:
                 
                 for post in data.get('data', {}).get('children', []):
                     p = post.get('data', {})
+                    title = (p.get('title') or '').strip()
+                    body = (p.get('selftext') or '').strip()
+                    combined_text = "\n\n".join(part for part in [title, body] if part)[:2000]
                     
                     discussions.append({
                         'review_id': hashlib.md5(p.get('id', '').encode()).hexdigest()[:16],
                         'source': f'reddit/r/{subreddit}',
+                        'community': f'r/{subreddit}',
+                        'source_kind': 'reddit',
+                        'category': category,
+                        'query_term': query,
                         'author': p.get('author', 'anonymous'),
-                        'title': p.get('title', ''),
-                        'content': p.get('selftext', '')[:2000],
+                        'title': title,
+                        'content': combined_text,
                         'upvotes': p.get('ups', 0),
                         'url': f"https://reddit.com{p.get('permalink', '')}",
                         'created_at': datetime.fromtimestamp(p.get('created_utc', 0)).isoformat() if p.get('created_utc') else None
@@ -449,7 +482,7 @@ def scrape_all_sources():
             time.sleep(0.5)
             
             # Reddit discussions
-            discussions = reddit.search_discussions(query, limit=10)
+            discussions = reddit.search_discussions(query, category, limit=10)
             all_discussions.extend(discussions)
             time.sleep(1)
     
