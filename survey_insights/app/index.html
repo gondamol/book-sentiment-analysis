@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIV Care and Treatment Services: CLM Feedback Analysis</title>
+    <meta
+      name="description"
+      content="Interactive CLM feedback analysis for HIV care and treatment services, client experience, access barriers, and improvement priorities."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">CLM Feedback Analysis</p>
+          <h1>HIV care and treatment services through the voice of clients and communities.</h1>
+          <p class="hero-text">
+            Review what respondents liked, where access still breaks down, and which improvements appear most often across counties,
+            facilities, and survey modules represented in the workbook.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./assets/usaid-community-feedback-report.pdf" target="_blank" rel="noreferrer"
+              >Open PDF report</a
+            >
+            <a class="button button-secondary" href="./assets/Tech_Oreon_Analytica_CLM_Feedback_Report.docx" download
+              >Download Word report</a
+            >
+            <a class="button button-secondary" href="./assets/records.csv" download>Download processed CSV</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-stat">
+            <span class="hero-label">Dataset</span>
+            <strong id="heroResponses">23,457 responses</strong>
+            <small>CLM and related HIV-service feedback collected across multiple modules in Kenya.</small>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-label">Context</span>
+            <strong>Community feedback within the HIV response ecosystem</strong>
+            <small>Framed within the wider work of NEPHAK, government and county teams, PEPFAR/USAID, the Global Fund, UNAIDS, and other HIV partners.</small>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="filters">
+          <div class="panel sticky">
+            <div class="panel-header">
+              <h2>Filters</h2>
+              <button id="resetFilters" class="link-button" type="button">Reset</button>
+            </div>
+
+            <label class="field">
+              <span>Search comments</span>
+              <input id="searchInput" type="search" placeholder="Search snippet, facility, organization..." />
+            </label>
+
+            <label class="field">
+              <span>Survey module</span>
+              <select id="surveyFilter"></select>
+            </label>
+
+            <label class="field">
+              <span>County</span>
+              <select id="countyFilter"></select>
+            </label>
+
+            <label class="field">
+              <span>Gender</span>
+              <select id="genderFilter"></select>
+            </label>
+
+            <label class="field">
+              <span>Age group</span>
+              <select id="ageFilter"></select>
+            </label>
+
+            <label class="field">
+              <span>Theme</span>
+              <select id="themeFilter"></select>
+            </label>
+
+            <label class="field">
+              <span>Sentiment</span>
+              <select id="sentimentFilter">
+                <option value="">All sentiment</option>
+                <option value="Positive">Positive</option>
+                <option value="Mixed / Neutral">Mixed / Neutral</option>
+                <option value="Negative">Negative</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Satisfaction</span>
+              <select id="satisfactionFilter"></select>
+            </label>
+
+            <div class="method-card">
+                <h3>How to read this</h3>
+              <p>
+                The dashboard combines survey metadata, structured service questions, and sentiment scoring on open comments.
+                Themes are grouped with transparent keyword rules so the findings stay easy to explain during review meetings.
+              </p>
+            </div>
+          </div>
+        </aside>
+
+        <section class="content">
+          <section class="kpi-grid" id="kpiGrid"></section>
+
+          <section class="panel insight-panel">
+            <div class="panel-header">
+              <h2>Overview</h2>
+              <p id="resultCount"></p>
+            </div>
+            <div id="insightBullets" class="insight-bullets"></div>
+          </section>
+
+          <section class="chart-grid">
+            <article class="panel chart-panel">
+              <div class="panel-header">
+                <h2>Level of Satisfaction</h2>
+                <p>Sentiment and positive satisfaction share over time.</p>
+              </div>
+              <div id="trendChart" class="chart"></div>
+            </article>
+
+            <article class="panel chart-panel">
+              <div class="panel-header">
+                <h2>Survey Coverage</h2>
+                <p>Which modules dominate the current slice of feedback.</p>
+              </div>
+              <div id="surveyChart" class="chart"></div>
+            </article>
+
+            <article class="panel chart-panel">
+              <div class="panel-header">
+                <h2>Accessibility to Health Care Services</h2>
+                <p>Most frequently referenced topics in open text.</p>
+              </div>
+              <div id="themeChart" class="chart"></div>
+            </article>
+
+            <article class="panel chart-panel">
+              <div class="panel-header">
+                <h2>County Footprint</h2>
+                <p>Top counties represented after filtering.</p>
+              </div>
+              <div id="countyChart" class="chart"></div>
+            </article>
+          </section>
+
+          <section class="panel terms-panel">
+            <div class="panel-header">
+              <h2>What Clients Said</h2>
+              <p>Terms are drawn from the filtered open-text fields.</p>
+            </div>
+            <div class="term-columns">
+              <div>
+                <h3>What clients liked</h3>
+                <div id="positiveTerms" class="term-cloud"></div>
+              </div>
+              <div>
+                <h3>What needs to be improved</h3>
+                <div id="improvementTerms" class="term-cloud"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Community Voice</h2>
+              <p>Representative comments from the current filtered population.</p>
+            </div>
+            <div id="quoteList" class="quote-list"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <template id="kpiCardTemplate">
+      <article class="kpi-card">
+        <span class="kpi-label"></span>
+        <strong class="kpi-value"></strong>
+        <small class="kpi-note"></small>
+      </article>
+    </template>
+
+    <template id="quoteCardTemplate">
+      <article class="quote-card">
+        <div class="quote-meta">
+          <span class="quote-chip"></span>
+          <span class="quote-chip quote-chip-soft"></span>
+        </div>
+        <p class="quote-text"></p>
+        <div class="quote-footer"></div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

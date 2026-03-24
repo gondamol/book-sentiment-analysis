@@ -1,0 +1,1682 @@
+{
+  "generated_at": "2026-03-24 14:37:00 UTC",
+  "source_file": "Survey_04_04_2023, 23_09_23.xlsx",
+  "response_count": 23457,
+  "survey_counts": [
+    {
+      "name": "CLM Feedback",
+      "count": 21661
+    },
+    {
+      "name": "App quality feedback",
+      "count": 902
+    },
+    {
+      "name": "Mental health survey",
+      "count": 639
+    },
+    {
+      "name": "COVID-19",
+      "count": 250
+    },
+    {
+      "name": "Feedback",
+      "count": 4
+    },
+    {
+      "name": "The level of satisfaction for the services offered at the PEPFAR supported sites",
+      "count": 1
+    }
+  ],
+  "county_counts": [
+    {
+      "name": "Homa Bay",
+      "count": 13048
+    },
+    {
+      "name": "Kilifi",
+      "count": 5665
+    },
+    {
+      "name": "Makueni",
+      "count": 2857
+    },
+    {
+      "name": "Kisii",
+      "count": 199
+    },
+    {
+      "name": "Nairobi",
+      "count": 193
+    },
+    {
+      "name": "Unknown",
+      "count": 191
+    },
+    {
+      "name": "Siaya",
+      "count": 168
+    },
+    {
+      "name": "Nakuru",
+      "count": 118
+    },
+    {
+      "name": "Mombasa",
+      "count": 109
+    },
+    {
+      "name": "Kakamega",
+      "count": 106
+    },
+    {
+      "name": "Migori",
+      "count": 105
+    },
+    {
+      "name": "Busia",
+      "count": 103
+    }
+  ],
+  "gender_counts": [
+    {
+      "name": "Female",
+      "count": 14646
+    },
+    {
+      "name": "Male",
+      "count": 7538
+    },
+    {
+      "name": "Unknown",
+      "count": 1071
+    },
+    {
+      "name": "Adolescent Girl/Boy",
+      "count": 154
+    },
+    {
+      "name": "Prefer not to answer",
+      "count": 22
+    },
+    {
+      "name": "Non \u2013 Binary",
+      "count": 16
+    },
+    {
+      "name": "Transgender",
+      "count": 10
+    }
+  ],
+  "age_group_counts": [
+    {
+      "name": "31 to 55",
+      "count": 5473
+    },
+    {
+      "name": "18 to 30",
+      "count": 5354
+    },
+    {
+      "name": "35-44",
+      "count": 3527
+    },
+    {
+      "name": "25-34",
+      "count": 2758
+    },
+    {
+      "name": "45-54",
+      "count": 2743
+    },
+    {
+      "name": "55-64",
+      "count": 1184
+    },
+    {
+      "name": "18-24",
+      "count": 1114
+    },
+    {
+      "name": "65+",
+      "count": 526
+    },
+    {
+      "name": "Under 18",
+      "count": 363
+    },
+    {
+      "name": "Unknown",
+      "count": 217
+    },
+    {
+      "name": "55 and above",
+      "count": 198
+    }
+  ],
+  "sentiment_counts": [
+    {
+      "name": "Mixed / Neutral",
+      "count": 5387
+    },
+    {
+      "name": "Positive",
+      "count": 16276
+    },
+    {
+      "name": "Negative",
+      "count": 1794
+    }
+  ],
+  "satisfaction_counts": [
+    {
+      "name": "Unknown",
+      "count": 2275
+    },
+    {
+      "name": "Very satisfied",
+      "count": 7285
+    },
+    {
+      "name": "Satisfied",
+      "count": 13735
+    },
+    {
+      "name": "Do not know",
+      "count": 116
+    },
+    {
+      "name": "Prefer not to answer",
+      "count": 46
+    }
+  ],
+  "metrics": {
+    "avg_sentiment": 0.434,
+    "positive_satisfaction_share": 89.6,
+    "access_challenge_share": 22.4,
+    "confidentiality_yes_share": 89.0,
+    "rights_awareness_share": 79.9
+  },
+  "monthly_trend": [
+    {
+      "month": "1956-11",
+      "responses": 1,
+      "avg_sentiment": 0.84,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1959-12",
+      "responses": 1,
+      "avg_sentiment": 0.73,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1960-06",
+      "responses": 1,
+      "avg_sentiment": 0.28,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1962-04",
+      "responses": 1,
+      "avg_sentiment": 0.586,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1964-03",
+      "responses": 1,
+      "avg_sentiment": 0.653,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1965-03",
+      "responses": 1,
+      "avg_sentiment": 0.44,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1965-09",
+      "responses": 1,
+      "avg_sentiment": 0.832,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1968-02",
+      "responses": 1,
+      "avg_sentiment": 0.563,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1970-09",
+      "responses": 1,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1970-10",
+      "responses": 1,
+      "avg_sentiment": 0.564,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1971-05",
+      "responses": 1,
+      "avg_sentiment": 0.27,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1972-02",
+      "responses": 1,
+      "avg_sentiment": 0.857,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1972-06",
+      "responses": 1,
+      "avg_sentiment": 0.224,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1975-09",
+      "responses": 1,
+      "avg_sentiment": 0.153,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1976-03",
+      "responses": 1,
+      "avg_sentiment": 0.911,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1976-06",
+      "responses": 1,
+      "avg_sentiment": -0.573,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1976-08",
+      "responses": 1,
+      "avg_sentiment": 0.67,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1976-11",
+      "responses": 1,
+      "avg_sentiment": 0.649,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1977-08",
+      "responses": 1,
+      "avg_sentiment": 0.94,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1977-12",
+      "responses": 1,
+      "avg_sentiment": -0.141,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1978-06",
+      "responses": 1,
+      "avg_sentiment": -0.802,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1978-07",
+      "responses": 1,
+      "avg_sentiment": 0.878,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1978-11",
+      "responses": 1,
+      "avg_sentiment": 0.612,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1979-05",
+      "responses": 1,
+      "avg_sentiment": 0.542,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1979-06",
+      "responses": 1,
+      "avg_sentiment": -0.077,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1980-04",
+      "responses": 1,
+      "avg_sentiment": -0.461,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1980-06",
+      "responses": 1,
+      "avg_sentiment": 0.079,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1982-02",
+      "responses": 1,
+      "avg_sentiment": 0.913,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1982-03",
+      "responses": 1,
+      "avg_sentiment": 0.625,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1982-10",
+      "responses": 1,
+      "avg_sentiment": 0.202,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1983-05",
+      "responses": 1,
+      "avg_sentiment": 0.572,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1985-01",
+      "responses": 2,
+      "avg_sentiment": 0.813,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 50.0
+    },
+    {
+      "month": "1986-04",
+      "responses": 1,
+      "avg_sentiment": 0.925,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1987-01",
+      "responses": 1,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1987-06",
+      "responses": 1,
+      "avg_sentiment": -0.402,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1988-04",
+      "responses": 1,
+      "avg_sentiment": 0.13,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1989-01",
+      "responses": 1,
+      "avg_sentiment": 0.736,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1989-04",
+      "responses": 1,
+      "avg_sentiment": 0.69,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1989-12",
+      "responses": 1,
+      "avg_sentiment": 0.224,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1990-09",
+      "responses": 1,
+      "avg_sentiment": 0.776,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1990-12",
+      "responses": 1,
+      "avg_sentiment": 0.784,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1992-06",
+      "responses": 1,
+      "avg_sentiment": 0.402,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1992-11",
+      "responses": 1,
+      "avg_sentiment": 0.577,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1996-06",
+      "responses": 1,
+      "avg_sentiment": 0.914,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1997-02",
+      "responses": 1,
+      "avg_sentiment": 0.813,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "1999-03",
+      "responses": 1,
+      "avg_sentiment": 0.599,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "1999-09",
+      "responses": 1,
+      "avg_sentiment": 0.055,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "2000-07",
+      "responses": 1,
+      "avg_sentiment": 0.765,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2001-04",
+      "responses": 1,
+      "avg_sentiment": 0.712,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "2001-07",
+      "responses": 1,
+      "avg_sentiment": -0.273,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2001-10",
+      "responses": 1,
+      "avg_sentiment": 0.781,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2003-03",
+      "responses": 1,
+      "avg_sentiment": 0.84,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "2016-02",
+      "responses": 1,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2022-01",
+      "responses": 1,
+      "avg_sentiment": -0.103,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2022-02",
+      "responses": 1,
+      "avg_sentiment": -0.298,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "2022-05",
+      "responses": 15,
+      "avg_sentiment": 0.027,
+      "positive_satisfaction_share": 6.7,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2022-06",
+      "responses": 596,
+      "avg_sentiment": 0.07,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2022-07",
+      "responses": 189,
+      "avg_sentiment": 0.087,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2022-08",
+      "responses": 51,
+      "avg_sentiment": 0.03,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2022-09",
+      "responses": 95,
+      "avg_sentiment": -0.038,
+      "positive_satisfaction_share": 2.1,
+      "access_challenge_share": 2.1
+    },
+    {
+      "month": "2022-10",
+      "responses": 3579,
+      "avg_sentiment": 0.475,
+      "positive_satisfaction_share": 91.1,
+      "access_challenge_share": 25.3
+    },
+    {
+      "month": "2022-11",
+      "responses": 5390,
+      "avg_sentiment": 0.461,
+      "positive_satisfaction_share": 93.5,
+      "access_challenge_share": 25.3
+    },
+    {
+      "month": "2022-12",
+      "responses": 2658,
+      "avg_sentiment": 0.432,
+      "positive_satisfaction_share": 92.1,
+      "access_challenge_share": 23.7
+    },
+    {
+      "month": "2023-01",
+      "responses": 2774,
+      "avg_sentiment": 0.467,
+      "positive_satisfaction_share": 92.6,
+      "access_challenge_share": 19.2
+    },
+    {
+      "month": "2023-02",
+      "responses": 1934,
+      "avg_sentiment": 0.39,
+      "positive_satisfaction_share": 89.9,
+      "access_challenge_share": 19.2
+    },
+    {
+      "month": "2023-03",
+      "responses": 5790,
+      "avg_sentiment": 0.448,
+      "positive_satisfaction_share": 96.6,
+      "access_challenge_share": 23.2
+    },
+    {
+      "month": "2023-04",
+      "responses": 324,
+      "avg_sentiment": 0.406,
+      "positive_satisfaction_share": 97.5,
+      "access_challenge_share": 21.6
+    },
+    {
+      "month": "2023-05",
+      "responses": 1,
+      "avg_sentiment": 0.361,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2023-08",
+      "responses": 2,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    },
+    {
+      "month": "2023-09",
+      "responses": 1,
+      "avg_sentiment": 0.802,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2025-02",
+      "responses": 1,
+      "avg_sentiment": 0.57,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 0.0
+    },
+    {
+      "month": "2025-11",
+      "responses": 1,
+      "avg_sentiment": -0.052,
+      "positive_satisfaction_share": 100.0,
+      "access_challenge_share": 100.0
+    }
+  ],
+  "theme_overview": [
+    {
+      "theme_id": "staff_attitude",
+      "label": "Staff attitude and respect",
+      "count": 14057,
+      "share": 59.9
+    },
+    {
+      "theme_id": "medicines_supplies",
+      "label": "Medicines and supplies",
+      "count": 10875,
+      "share": 46.4
+    },
+    {
+      "theme_id": "food_transport_support",
+      "label": "Food and transport support",
+      "count": 8368,
+      "share": 35.7
+    },
+    {
+      "theme_id": "equipment_space",
+      "label": "Equipment and infrastructure",
+      "count": 7646,
+      "share": 32.6
+    },
+    {
+      "theme_id": "wait_time",
+      "label": "Waiting time and flow",
+      "count": 5427,
+      "share": 23.1
+    },
+    {
+      "theme_id": "access_cost",
+      "label": "Access and affordability",
+      "count": 3735,
+      "share": 15.9
+    },
+    {
+      "theme_id": "confidentiality_stigma",
+      "label": "Confidentiality and stigma",
+      "count": 3132,
+      "share": 13.4
+    },
+    {
+      "theme_id": "counseling_mental_health",
+      "label": "Counseling and mental wellbeing",
+      "count": 1748,
+      "share": 7.5
+    }
+  ],
+  "survey_profiles": {
+    "App quality feedback": {
+      "responses": 902,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0,
+      "top_county": "Kisii"
+    },
+    "CLM Feedback": {
+      "responses": 21661,
+      "avg_sentiment": 0.468,
+      "positive_satisfaction_share": 97.0,
+      "access_challenge_share": 24.2,
+      "top_county": "Homa Bay"
+    },
+    "Mental health survey": {
+      "responses": 639,
+      "avg_sentiment": 0.072,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0,
+      "top_county": "Siaya"
+    },
+    "Feedback": {
+      "responses": 4,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 25.0,
+      "access_challenge_share": 25.0,
+      "top_county": "Siaya"
+    },
+    "The level of satisfaction for the services offered at the PEPFAR supported sites": {
+      "responses": 1,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0,
+      "top_county": "Busia"
+    },
+    "COVID-19": {
+      "responses": 250,
+      "avg_sentiment": 0.0,
+      "positive_satisfaction_share": 0.0,
+      "access_challenge_share": 0.0,
+      "top_county": "Kakamega"
+    }
+  },
+  "top_terms": {
+    "positive": [
+      {
+        "term": "good",
+        "count": 5227
+      },
+      {
+        "term": "are",
+        "count": 4787
+      },
+      {
+        "term": "friendly",
+        "count": 3113
+      },
+      {
+        "term": "staff",
+        "count": 1684
+      },
+      {
+        "term": "drugs",
+        "count": 1679
+      },
+      {
+        "term": "staffs",
+        "count": 1444
+      },
+      {
+        "term": "free",
+        "count": 1413
+      },
+      {
+        "term": "providers",
+        "count": 1100
+      },
+      {
+        "term": "delivery",
+        "count": 834
+      },
+      {
+        "term": "available",
+        "count": 785
+      },
+      {
+        "term": "art",
+        "count": 704
+      },
+      {
+        "term": "was",
+        "count": 703
+      },
+      {
+        "term": "reception",
+        "count": 685
+      },
+      {
+        "term": "health",
+        "count": 657
+      },
+      {
+        "term": "quick",
+        "count": 618
+      }
+    ],
+    "concerns": [
+      {
+        "term": "long",
+        "count": 1126
+      },
+      {
+        "term": "waiting",
+        "count": 911
+      },
+      {
+        "term": "time",
+        "count": 772
+      },
+      {
+        "term": "lack",
+        "count": 641
+      },
+      {
+        "term": "are",
+        "count": 565
+      },
+      {
+        "term": "not",
+        "count": 526
+      },
+      {
+        "term": "drugs",
+        "count": 525
+      },
+      {
+        "term": "observed",
+        "count": 420
+      },
+      {
+        "term": "too",
+        "count": 409
+      },
+      {
+        "term": "during",
+        "count": 389
+      },
+      {
+        "term": "nutritional",
+        "count": 352
+      },
+      {
+        "term": "supplements",
+        "count": 352
+      },
+      {
+        "term": "delays",
+        "count": 281
+      },
+      {
+        "term": "liked",
+        "count": 275
+      },
+      {
+        "term": "slow",
+        "count": 268
+      }
+    ],
+    "improvements": [
+      {
+        "term": "more",
+        "count": 3401
+      },
+      {
+        "term": "drugs",
+        "count": 3007
+      },
+      {
+        "term": "time",
+        "count": 1097
+      },
+      {
+        "term": "additional",
+        "count": 953
+      },
+      {
+        "term": "support",
+        "count": 946
+      },
+      {
+        "term": "staffs",
+        "count": 900
+      },
+      {
+        "term": "satisfied",
+        "count": 898
+      },
+      {
+        "term": "improve",
+        "count": 808
+      },
+      {
+        "term": "enough",
+        "count": 742
+      },
+      {
+        "term": "availability",
+        "count": 722
+      },
+      {
+        "term": "equipments",
+        "count": 695
+      },
+      {
+        "term": "food",
+        "count": 633
+      },
+      {
+        "term": "not",
+        "count": 597
+      },
+      {
+        "term": "supply",
+        "count": 582
+      },
+      {
+        "term": "health",
+        "count": 554
+      }
+    ],
+    "access": [
+      {
+        "term": "more",
+        "count": 4460
+      },
+      {
+        "term": "drugs",
+        "count": 2825
+      },
+      {
+        "term": "transport",
+        "count": 1630
+      },
+      {
+        "term": "support",
+        "count": 1305
+      },
+      {
+        "term": "food",
+        "count": 1187
+      },
+      {
+        "term": "provide",
+        "count": 1183
+      },
+      {
+        "term": "staffs",
+        "count": 986
+      },
+      {
+        "term": "additional",
+        "count": 848
+      },
+      {
+        "term": "supply",
+        "count": 809
+      },
+      {
+        "term": "health",
+        "count": 747
+      },
+      {
+        "term": "enough",
+        "count": 735
+      },
+      {
+        "term": "not",
+        "count": 721
+      },
+      {
+        "term": "equipments",
+        "count": 703
+      },
+      {
+        "term": "doctors",
+        "count": 681
+      },
+      {
+        "term": "add",
+        "count": 659
+      }
+    ],
+    "mental_health": [
+      {
+        "term": "yes",
+        "count": 135
+      },
+      {
+        "term": "depression",
+        "count": 14
+      },
+      {
+        "term": "violence",
+        "count": 14
+      },
+      {
+        "term": "high",
+        "count": 13
+      },
+      {
+        "term": "gbv",
+        "count": 13
+      },
+      {
+        "term": "lack",
+        "count": 12
+      },
+      {
+        "term": "cost",
+        "count": 10
+      },
+      {
+        "term": "mental",
+        "count": 10
+      },
+      {
+        "term": "living",
+        "count": 9
+      },
+      {
+        "term": "gender",
+        "count": 9
+      },
+      {
+        "term": "based",
+        "count": 9
+      },
+      {
+        "term": "health",
+        "count": 8
+      },
+      {
+        "term": "financial",
+        "count": 8
+      },
+      {
+        "term": "problems",
+        "count": 8
+      },
+      {
+        "term": "are",
+        "count": 8
+      }
+    ]
+  },
+  "quotes": {
+    "positive": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "The good services and friendly staffs at this facility it so amazing",
+        "sentiment_score": 0.9883,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good health care system",
+        "sentiment_score": 0.984,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "The free art drugs issued for my well being",
+        "sentiment_score": 0.983,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Nurses have good understanding, they also offer quick services",
+        "sentiment_score": 0.9812,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "counseling_mental_health"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Friendly staff and good services",
+        "sentiment_score": 0.9799,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good reception",
+        "sentiment_score": 0.9781,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good service etiquette",
+        "sentiment_score": 0.9756,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Availability of drugs friendliness of providers the speed of service delivery",
+        "sentiment_score": 0.9753,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "equipment_space",
+          "confidentiality_stigma"
+        ]
+      }
+    ],
+    "improvement": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Lack of enough medicine and equipment that lead to referrals",
+        "sentiment_score": -0.9387,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "equipment_space",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "Long queing",
+        "sentiment_score": -0.9201,
+        "themes": [
+          "food_transport_support",
+          "confidentiality_stigma",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Failure to treat other illnesses by the facility",
+        "sentiment_score": -0.91,
+        "themes": [
+          "wait_time"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "The staffs are very cruel",
+        "sentiment_score": -0.8874,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Nutritional support",
+        "sentiment_score": -0.8868,
+        "themes": [
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "Mental health survey",
+        "county": "Nairobi",
+        "snippet": "Depression since many suffered loss of their jobs ,fear also came over .I encouraged people to go and take COVID 19 vaccine and follow the COVID protocols",
+        "sentiment_score": -0.872,
+        "themes": [
+          "counseling_mental_health"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "It wasn't as I was expecting",
+        "sentiment_score": -0.872,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "equipment_space"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "The long waiting time when I had an emergency",
+        "sentiment_score": -0.8665,
+        "themes": [
+          "wait_time"
+        ]
+      }
+    ]
+  },
+  "theme_quotes": {
+    "staff_attitude": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "The good services and friendly staffs at this facility it so amazing",
+        "sentiment_score": 0.9883,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good health care system",
+        "sentiment_score": 0.984,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "The free art drugs issued for my well being",
+        "sentiment_score": 0.983,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Nurses have good understanding, they also offer quick services",
+        "sentiment_score": 0.9812,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "counseling_mental_health"
+        ]
+      }
+    ],
+    "medicines_supplies": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "The good services and friendly staffs at this facility it so amazing",
+        "sentiment_score": 0.9883,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good health care system",
+        "sentiment_score": 0.984,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "The free art drugs issued for my well being",
+        "sentiment_score": 0.983,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Nurses have good understanding, they also offer quick services",
+        "sentiment_score": 0.9812,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "counseling_mental_health"
+        ]
+      }
+    ],
+    "food_transport_support": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "The good services and friendly staffs at this facility it so amazing",
+        "sentiment_score": 0.9883,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good health care system",
+        "sentiment_score": 0.984,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "The free art drugs issued for my well being",
+        "sentiment_score": 0.983,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Friendly staff and good services",
+        "sentiment_score": 0.9799,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      }
+    ],
+    "access_cost": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "The free art drugs issued for my well being",
+        "sentiment_score": 0.983,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Friendly staff and good services",
+        "sentiment_score": 0.9799,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "It's near my home so easy accessibility",
+        "sentiment_score": 0.9748,
+        "themes": [
+          "food_transport_support",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good care and service treatment",
+        "sentiment_score": 0.9728,
+        "themes": [
+          "medicines_supplies",
+          "equipment_space",
+          "access_cost"
+        ]
+      }
+    ],
+    "equipment_space": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Availability of drugs friendliness of providers the speed of service delivery",
+        "sentiment_score": 0.9753,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "equipment_space",
+          "confidentiality_stigma"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "I like that the nurses are very friendly",
+        "sentiment_score": 0.9748,
+        "themes": [
+          "staff_attitude",
+          "equipment_space"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good care and service treatment",
+        "sentiment_score": 0.9728,
+        "themes": [
+          "medicines_supplies",
+          "equipment_space",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Respectful and compassionate care from the service providers",
+        "sentiment_score": 0.9726,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "equipment_space",
+          "counseling_mental_health"
+        ]
+      }
+    ],
+    "confidentiality_stigma": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Availability of drugs friendliness of providers the speed of service delivery",
+        "sentiment_score": 0.9753,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "equipment_space",
+          "confidentiality_stigma"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Thy offer good and comfortable services",
+        "sentiment_score": 0.9716,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "equipment_space",
+          "confidentiality_stigma"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Friendly staff and good services",
+        "sentiment_score": 0.9702,
+        "themes": [
+          "staff_attitude",
+          "food_transport_support",
+          "confidentiality_stigma",
+          "access_cost"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "Free ARTs and friendly health care workers",
+        "sentiment_score": 0.9702,
+        "themes": [
+          "staff_attitude",
+          "medicines_supplies",
+          "food_transport_support",
+          "equipment_space",
+          "confidentiality_stigma"
+        ]
+      }
+    ],
+    "wait_time": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Nurses have good understanding, they also offer quick services",
+        "sentiment_score": 0.9812,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "counseling_mental_health"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Respectful and compassionate care from the service providers",
+        "sentiment_score": 0.9726,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "equipment_space",
+          "counseling_mental_health"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Services are good and better",
+        "sentiment_score": 0.9716,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "food_transport_support",
+          "equipment_space"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good counseling",
+        "sentiment_score": 0.9682,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "counseling_mental_health"
+        ]
+      }
+    ],
+    "counseling_mental_health": [
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Nurses have good understanding, they also offer quick services",
+        "sentiment_score": 0.9812,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "counseling_mental_health"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Kilifi",
+        "snippet": "Provision of other services apart from HIV care and treatment.",
+        "sentiment_score": 0.9732,
+        "themes": [
+          "food_transport_support",
+          "counseling_mental_health"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Makueni",
+        "snippet": "Respectful and compassionate care from the service providers",
+        "sentiment_score": 0.9726,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "medicines_supplies",
+          "equipment_space",
+          "counseling_mental_health"
+        ]
+      },
+      {
+        "survey_name": "CLM Feedback",
+        "county": "Homa Bay",
+        "snippet": "Good counseling",
+        "sentiment_score": 0.9682,
+        "themes": [
+          "staff_attitude",
+          "wait_time",
+          "counseling_mental_health"
+        ]
+      }
+    ]
+  }
+}

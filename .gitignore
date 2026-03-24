@@ -36,3 +36,6 @@ secrets.toml
 # Temporary
 *.tmp
 .cache/
+*.Zone.Identifier
+*~$*.docx
+*:$DATA
